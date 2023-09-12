@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <audio id="birthdayAudio" controls loop>
+            <source src="birthday.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playButton">Sdu❤️</button>
+        
+        <!-- <img src="pic1.jpeg" alt="Image Description"> -->
+        <div class="fireworks"></div>
+        <div class="fireworks2"></div>
+        <div class="fireworks3"></div>
+        <div class="fireworks4"></div>
+        <div class="fireworks5"></div>
+        <div class="wish">
+            <div class="imgSlider"></div>
+            <p class="frog">&#x1F438;</p>
+            <div class="balloon">HAPPY</div>
+            <div class="balloon1">BIRTHDAY</div>
+            <!-- <img src="B.jpeg" alt=""> -->
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="center">
+            <div class="candle">
+                <div class="candle-flame"></div>
+                <div class="candle-wick"></div>
+                <div class="candle-wax"></div>
+                <div class="candle-stand"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper2">
+        <div class="center2">
+            <div class="candle2">
+                <div class="candle-flame2"></div>
+                <div class="candle-wick2"></div>
+                <div class="candle-wax2"></div>
+                <div class="candle-stand2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper3">
+        <div class="center3">
+            <div class="candle3">
+                <div class="candle-flame3"></div>
+                <div class="candle-wick3"></div>
+                <div class="candle-wax3"></div>
+                <div class="candle-stand3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('birthdayAudio');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // Add hearts randomly
+        const container = document.querySelector('.container');
+        const numHearts = 30; // Change this to the number of hearts you want
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+
+        for (let i = 0; i < numHearts; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️'; // You can use any heart emoji here
+            const x = Math.random() * containerWidth;
+            const y = Math.random() * containerHeight;
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            container.appendChild(heart);
+        }
+    </script>
+</body>
+
+</html>

@@ -483,12 +483,12 @@ button {
   box-shadow: inset -15px 0px 0px -10px #ffffff;
 }
 
-/* .candle-stand3 {
+.candle-stand3 {
   width: 80px;
   height: 8px;
   background: #1c233e;
   border-radius: 3px;
-} */
+}
 
 @keyframes flame-twirl {
 
@@ -531,7 +531,7 @@ button {
   /* width: 50px;
   height: 100px; */
   font-size: 40px;
-  top: 50px;
+  margin-top: -25px;
 }
 
 @media (max-width: 1000px) {
